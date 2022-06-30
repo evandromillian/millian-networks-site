@@ -1,0 +1,352 @@
+baseURL = 'http://example.org/'
+defaultContentLanguage = "en"
+languageCode = 'en'
+title = 'Millian Networks'
+theme = "FeelIt"
+googleAnalytics = ""
+
+# Author config
+[author]
+    name = "Evandro Millian"
+    email = "evandro.millian@gmail.com"
+    link = ""
+
+# Sitemap config
+[sitemap]
+    changefreq = "weekly"
+    filename = "sitemap.xml"
+    priority = 0.5
+
+[params]
+    version = "1.0.X"
+    breadcrumb = true
+
+[params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+        logo = ""
+        name = "Evandro Millian"
+        #pre = "<i class='fas fa-hand-holding-heart fa-fw'></i>"
+        #post = ""
+        typeit = false
+        #rss = true
+
+[params.footer]
+    enable = true
+    # Custom content (HTML format is supported)
+    custom = ''
+    hugo = true
+    copyright = true
+    author = true
+    since = 2022
+
+[params.page]
+    lightgallery = true
+    fontawesome = true
+    cdnfontawesome = true
+    linkToMarkdown = true
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+
+  [params.page.toc]
+    enable = true
+    keepStatic = false
+    auto = true
+
+[params.section]
+    paginate = 20
+    dateFormat = "01-02"
+    rss = 15
+
+[params.list]
+    paginate = 20
+    dateFormat = "01-02"
+    rss = 15
+    
+[params.analytics]
+    enable = false
+
+[params.social]
+    github = "evandromillian"
+    bitbucket = ""
+    linkedin = "evandro-millian-16767812"
+    email = "evandro.millian@gmail.com"
+    youtubechannel = ""
+    patreon = ""
+    blueprintue = "evandromillian"
+    rss = true
+
+[languages]
+  [languages.en]
+    weight = 1
+    languageCode = "en"
+    languageName = "English"
+    # whether to include Chinese/Japanese/Korean
+    hasCJKLanguage = false
+    # default amount of posts in each pages
+    paginate = 12
+    # copyright description used only for seo schema
+    copyright = ""
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        # you can add extra information before the name (HTML format is supported), such as icons
+        pre = ""
+        # you can add extra information after the name (HTML format is supported), such as icons
+        post = ""
+        name = "Posts"
+        url = "/posts/"
+        # title will be shown when you hover on this menu link.
+        title = ""
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "Categories"
+        url = "/categories/"
+        title = ""
+        weight = 2
+      [[languages.en.menu.main]]
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "Tags"
+        url = "/tags/"
+        title = ""
+        weight = 3
+#      [[languages.en.menu.main]]
+#        identifier = "documentation"
+#        pre = ""
+#        post = ""
+#        name = "Docs"
+#        url = "/categories/documentation/"
+#        title = ""
+#        weight = 4
+      [[languages.en.menu.main]]
+        identifier = "about"
+        pre = ""
+        post = ""
+        name = "About"
+        url = "/about/"
+        title = ""
+        weight = 5
+      [[languages.en.menu.main]]
+        identifier = "portfolio"
+        pre = ""
+        post = ""
+        name = "Portfolio"
+        url = "/portfolio"
+        title = ""
+        weight = 6
+      [[languages.en.menu.main]]
+        identifier = "github"
+        pre = "<i class='fab fa-github fa-fw'></i>"
+        post = ""
+        name = ""
+        url = "https://github.com/evandromillian"
+        title = "GitHub"
+        weight = 7
+    [languages.en.params]
+      description = "I talk about corporate and game development"
+      keywords = ["Games", "gaming", "Game Development", "Unreal Engine"]
+       
+       [languages.en.params.app]
+        title = "Evandro Millian"
+        noFavicon = false
+        svgFavicon = ""
+        themeColor = "#ffffff"
+        iconColor = "#5bbad5"
+        tileColor = "#da532c"
+
+      # Home page config
+      [languages.en.params.home]
+        rss = 10
+        [languages.en.params.home.profile]
+          enable = true
+          gravatarEmail = ""
+          avatarURL = "/images/avatar_face.jpg"
+          title = ""
+          subtitle = "I talk about corporate and game development"
+          typeit = true
+          social = true
+          disclaimer = ""
+        [languages.en.params.home.posts]
+          enable = true
+          paginate = 6
+          imagePreview = true
+
+      [languages.en.params.about]
+        enable = true
+        param = true
+        paramTitle = "Technology Knowledge"
+        description = "I'm a passionated developer that loves his job. Very interest and curious about game development."
+        [[languages.en.params.about.status]]
+          faIcon = "fas fa-building"
+          title = "Company"
+          desc = "B3"
+        [[languages.en.params.about.status]]
+          faIcon = "fas fa-briefcase fa-fw"
+          title = "Occupation"
+          desc = "Senior System Analyst"
+        [[languages.en.params.about.status]]
+          title = "Location"
+          faIcon = "fas fa-map-marker-alt"
+          desc = "São Paulo, Brazil"
+        [[languages.en.params.about.parameter]]
+          language = "Java"
+          level = "95"
+        [[languages.en.params.about.parameter]]
+          language = "Typescript"
+          level = "80"
+        [[languages.en.params.about.parameter]]
+          language = "Cloud Computing"
+          level = "65"
+        [[languages.en.params.about.parameter]]
+          language = "Unreal Engine"
+          level = "90"
+        [[languages.en.params.about.parameter]]
+          language = "Multiplayer Gameplay"
+          level = "80"
+        [[languages.en.params.about.parameter]]
+          language = "Serverless Development"
+          level = "75"
+  [languages.pt-BR]
+    weight = 2
+    languageCode = "pt-BR"
+    languageName = "Português"
+    # whether to include Chinese/Japanese/Korean
+    hasCJKLanguage = false
+    # default amount of posts in each pages
+    paginate = 12
+    # copyright description used only for seo schema
+    copyright = ""
+    [languages.pt-BR.menu]
+      [[languages.pt-BR.menu.main]]
+        identifier = "posts"
+        pre = ""
+        post = ""
+        name = "Posts"
+        url = "/posts/"
+        title = ""
+        weight = 1
+      [[languages.pt-BR.menu.main]]
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "Categorias"
+        url = "/categories/"
+        title = ""
+        weight = 2
+      [[languages.pt-BR.menu.main]]
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "Tags"
+        url = "/tags/"
+        title = ""
+        weight = 3
+#      [[languages.pt-BR.menu.main]]
+#        identifier = "documentation"
+#        pre = ""
+#        post = ""
+#        name = "Documentos"
+#        url = "/categories/documentation/"
+#        title = ""
+#        weight = 4
+      [[languages.pt-BR.menu.main]]
+        identifier = "about"
+        pre = ""
+        post = ""
+        name = "Sobre"
+        url = "/about/"
+        title = ""
+        weight = 5
+      [[languages.pt-BR.menu.main]]
+        identifier = "portfolio"
+        pre = ""
+        post = ""
+        name = "Portfolio"
+        url = "/portfolio"
+        title = ""
+        weight = 6
+      [[languages.pt-BR.menu.main]]
+        identifier = "github"
+        pre = "<i class='fab fa-github fa-fw'></i>"
+        post = ""
+        name = ""
+        url = "https://github.com/evandromillian"
+        title = "GitHub"
+        weight = 7
+    [languages.pt-BR.params]
+      description = "Eu falo sobre desenvolvimento corporativo e de jogos"
+      keywords = ["Games", "gaming", "Game Development", "Unreal Engine"]
+       
+       [languages.pt-BR.params.app]
+        title = "Evandro Millian"
+        noFavicon = false
+        svgFavicon = ""
+        themeColor = "#ffffff"
+        iconColor = "#5bbad5"
+        tileColor = "#da532c"
+
+      # Home page config
+      [languages.pt-BR.params.home]
+        rss = 10
+        [languages.pt-BR.params.home.profile]
+          enable = true
+          gravatarEmail = ""
+          avatarURL = "/images/avatar_face.jpg"
+          title = ""
+          subtitle = "Eu falo sobre desenvolvimento corporativo e de jogos"
+          typeit = true
+          social = true
+          disclaimer = ""
+        [languages.pt-BR.params.home.posts]
+          enable = true
+          paginate = 6
+          imagePreview = true
+
+      [languages.pt-BR.params.about]
+        enable = true
+        param = true
+        paramTitle = "Conhecimento Tecnológico"
+        description = "Sou um desenvolvedor apaixonado que ama seu trabalho. Muito interessado e curioso sobre desenvolvimento de jogos."
+        [[languages.pt-BR.params.about.status]]
+          faIcon = "fas fa-building"
+          title = "Company"
+          desc = "B3"
+        [[languages.pt-BR.params.about.status]]
+          faIcon = "fas fa-briefcase fa-fw"
+          title = "Ocupação"
+          desc = "Senior System Analyst"
+        [[languages.pt-BR.params.about.status]]
+          title = "Local"
+          faIcon = "fas fa-map-marker-alt"
+          desc = "São Paulo, Brazil"
+        [[languages.pt-BR.params.about.parameter]]
+          language = "Java"
+          level = "95"
+        [[languages.pt-BR.params.about.parameter]]
+          language = "Typescript"
+          level = "80"
+        [[languages.pt-BR.params.about.parameter]]
+          language = "Computação em Nuvem"
+          level = "65"
+        [[languages.pt-BR.params.about.parameter]]
+          language = "Unreal Engine"
+          level = "90"
+        [[languages.pt-BR.params.about.parameter]]
+          language = "Jogabilidade Multiplayer"
+          level = "80"
+        [[languages.pt-BR.params.about.parameter]]
+          language = "Desenvolvimento Serverless"
+          level = "75"          
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/khusika/FeelIt/issues/158)
+    noClasses = false
