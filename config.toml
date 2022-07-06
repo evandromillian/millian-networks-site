@@ -1,9 +1,37 @@
-baseURL = 'http://example.org/'
+baseURL = "https://evandromilian.com/"
 defaultContentLanguage = "en"
 languageCode = 'en'
-title = 'Millian Networks'
+title = "Millian Networks"
 theme = "FeelIt"
-googleAnalytics = ""
+googleAnalytics = "G-YTMN5JDLZM"
+enableEmoji = true
+
+[[deployment.targets]]
+name = "evandromillian-website"
+URL = "s3://www.evandromillian.com?region=us-east-1"
+cloudFrontDistributionID = "E3N7XZEBWSIFQL"
+
+[[deployment.matchers]]
+# Cache static assets for 1 year.
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+[[deployment.matchers]]
+# Set custom content type for /sitemap.xml
+pattern = "^sitemap\\.xml$"
+contentType = "application/xml"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true
+
 
 # Author config
 [author]
@@ -137,7 +165,7 @@ googleAnalytics = ""
         pre = ""
         post = ""
         name = "Portfolio"
-        url = "/portfolio"
+        url = "/portfolio/"
         title = ""
         weight = 6
       [[languages.en.menu.main]]
@@ -268,7 +296,7 @@ googleAnalytics = ""
         pre = ""
         post = ""
         name = "Portfolio"
-        url = "/portfolio"
+        url = "/portfolio/"
         title = ""
         weight = 6
       [[languages.pt-BR.menu.main]]
