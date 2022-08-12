@@ -13,12 +13,12 @@ cloudFrontDistributionID = "E3N7XZEBWSIFQL"
 
 [[deployment.matchers]]
 # Cache static assets for 1 year.
-pattern = "^.+\\.(js|css|svg|ttf)$"
+pattern = "^.+\\.(js|css|svg|ttf|woff2)$"
 cacheControl = "max-age=31536000, no-transform, public"
 gzip = true
 
 [[deployment.matchers]]
-pattern = "^.+\\.(png|jpg)$"
+pattern = "^.+\\.(png|jpg|webp)$"
 cacheControl = "max-age=31536000, no-transform, public"
 gzip = false
 
@@ -194,7 +194,7 @@ gzip = true
         [languages.en.params.home.profile]
           enable = true
           gravatarEmail = ""
-          avatarURL = "/images/avatar_face.jpg"
+          avatarURL = "/images/avatar_face.webp"
           title = ""
           subtitle = "I talk about corporate and game development"
           typeit = true
@@ -325,7 +325,7 @@ gzip = true
         [languages.pt-BR.params.home.profile]
           enable = true
           gravatarEmail = ""
-          avatarURL = "/images/avatar_face.jpg"
+          avatarURL = "/images/avatar_face.webp"
           title = ""
           subtitle = "Eu falo sobre desenvolvimento corporativo e de jogos"
           typeit = true

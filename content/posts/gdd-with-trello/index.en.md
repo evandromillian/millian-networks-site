@@ -1,6 +1,6 @@
 ---
 title: "GDD With Trello"
-date: 2022-06-27T14:01:43-03:00
+date: 2022-07-04T11:01:43-03:00
 description: ""
 draft: true
 author: "Evandro Millian"

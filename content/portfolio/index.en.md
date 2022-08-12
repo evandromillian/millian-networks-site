@@ -6,13 +6,13 @@ draft: false
  
 ### Myridian: The Last Stand
 
-{{<figure src="/images/myridian_wallpaper.png" width="600" >}}
+{{<figure src="/images/portfolio/myridian_wallpaper-small.png" >}}
 
 **Myridian: The Last Stand** is an old school mobile platformer featuring stunning 2D pixelart, an orchestral soundtrack and intense action.
 
 Driven by a story that requires players’ interaction in order to evolve, **The Last Stand** is the first chapter of Nettor’s mission to awaken the Verge and bring legendary heroes to life so they can face their greatest challenge.
 
-{{<figure src="/images/portfolio/Carlo_Slash_AttackA.gif" caption="Carlo attacking">}}
+{{<figure src="/images/portfolio/Carlo_Slash_AttackA.webp" caption="Carlo attacking">}}
 
 At the end of every chapter, players’ progresses achieving their goals will dictate how new heroes, missions and events will be inserted in the storyline. The most experienced players will be invited to join solo or co-op quests and their results will lead the story on.
 
@@ -22,13 +22,13 @@ The project required extensive research in many areas. Despite of all resources 
 
 ###### 1. Animation
 
-{{<figure src="/images/portfolio/Neeno_Carlo_Donna_RunCycle.gif" alt="Heroes running" title="Heroes running">}}
+{{<figure src="/images/portfolio/Neeno_Carlo_Donna_RunCycle.webp" alt="Heroes running" title="Heroes running">}}
 
 Due to the lack of a version of the animation controller for **Paper2D**, we found a plugin called **PaperZD**, exposing a state machine to control the transition among animations in the same way that it's available for skeleton meshes. 
 
 ###### 2. Color Palette & Skins
 
-{{<figure src="/images/Neeno-Alternate_Skins.png" alt="Neeno skins" title="Neeno skins" width="450">}}
+{{<figure src="/images/portfolio/Neeno-Alternate_Skins.png" alt="Neeno skins" title="Neeno skins" width="450">}}
 
 Color palettes were implemented using a combination of material calculations and texture preparations. The texture's colors acts as indexes to select colors from a palette in the materials.
 
@@ -42,7 +42,7 @@ To control the characters, the project used AI controllers using goal score, whi
 
 ###### 4. Multiplayer
 
-{{<figure src="/images/Fay-KillingSpree.gif" alt="Multiplayer fight" title="Multiplayer fight">}}
+{{<figure src="/images/portfolio/Fay-KillingSpree.webp" alt="Multiplayer fight" title="Multiplayer fight" width="500">}}
 
 Multiplayer logic were used for heroes and enemies movement, projectiles and moving platforms, as well as to replicate damage dealt and received among all characters. 
 
@@ -52,7 +52,7 @@ The game used dedicated servers hosted in **AWS** **GameLift**, and it was imple
 
 ###### 5. Matchmaking and Backend
 
-{{<figure src="/images/Myridian_teste_escolha_de_time.webp" alt="Team selection" title="Team selection">}}
+{{<figure src="/images/portfolio/Myridian_teste_escolha_de_time.webp" alt="Team selection" title="Team selection" width="500">}}
 
 The matchmaker required an application using cloud services for fast communication, great availablility and reduced cost. It uses a combination of **DynamoDB**, **Simple Queue Service** and **WebSockets** controlled by **API Gateway**.
 
