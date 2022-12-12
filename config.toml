@@ -169,13 +169,21 @@ gzip = true
         title = ""
         weight = 6
       [[languages.en.menu.main]]
+        identifier = "bookmarks"
+        pre = ""
+        post = ""
+        name = "Bookmarks"
+        url = "/bookmarks/"
+        title = ""
+        weight = 7
+      [[languages.en.menu.main]]
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
         post = ""
         name = ""
         url = "https://github.com/evandromillian"
         title = "GitHub"
-        weight = 7
+        weight = 8
     [languages.en.params]
       description = "I talk about corporate and game development"
       keywords = ["Games", "gaming", "Game Development", "Unreal Engine"]
@@ -300,13 +308,21 @@ gzip = true
         title = ""
         weight = 6
       [[languages.pt-BR.menu.main]]
+        identifier = "bookmarks"
+        pre = ""
+        post = ""
+        name = "Favoritos"
+        url = "/bookmarks/"
+        title = ""
+        weight = 7
+      [[languages.pt-BR.menu.main]]
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
         post = ""
         name = ""
         url = "https://github.com/evandromillian"
         title = "GitHub"
-        weight = 7
+        weight = 8
     [languages.pt-BR.params]
       description = "Eu falo sobre desenvolvimento corporativo e de jogos"
       keywords = ["Games", "gaming", "Game Development", "Unreal Engine"]
