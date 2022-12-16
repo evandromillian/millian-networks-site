@@ -96,6 +96,7 @@ gzip = true
     enable = false
 
 [params.social]
+    google = "evandromillian"
     github = "evandromillian"
     bitbucket = ""
     linkedin = "evandro-millian-16767812"
@@ -103,7 +104,7 @@ gzip = true
     youtubechannel = ""
     patreon = ""
     blueprintue = "evandromillian"
-    rss = true
+    rss = true    
 
 [languages]
   [languages.en]
