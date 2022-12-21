@@ -36,10 +36,11 @@ This list will be updated based on the learnings made.
 
 ### Blueprints
 
-* Do not use multiple input exec 
+* Use multiple inbound to a exec with caution, avoid most of the times
+    * This can lead to confusion, especially if one of the events is overridden
     * What may happens if you need to override the **Initialize** event in a children blueprint? The **BeginPlay** event will execute the code its linked, not the **Initialize** event. This will lead to bugs in the children blueprint.
 
-    {{<figure src="/images/unreal-engine-patterns/fork.webp" >}}
+    {{< figure src="/images/unreal-engine-patterns/fork.webp" >}}
 
     * Avoid as much as possible to have multiple input exec. In real code (that will be probably much bigger), it will be hard to be sure about the code flow and the event/function result. Simplicity is key, always.
     
@@ -49,14 +50,12 @@ This list will be updated based on the learnings made.
     * Repeated code should also be moved to its own function
 * Don't be afraid to use **Set Timer By Event/Function Name** in functions
     * It's better for organization, as delegate will be in its own event/function
-* Use multiple inbound to a exec with caution, avoid most of the times
-    * This can lead to confusion, especially if one of the events is overridden
-* Prefer **DoOnce** instead of boolean flags
+* Instead of a boolean flag changed in many places but checked in one or few places, use **DoOnce** node
     * If **DoOnce** is opened/closed in many places, create custom events calling **Open** and **Close** instead of use long **Exec** links.
 * Prefer **Select** instead of **Branch** to select values
     * Beyond the code flow simplification, **Select** allows to handle multiple values and is configurable for many data types (even enums).
 
-{{<figure src="/images/my-unreal-engine-patterns/selects.png" width=600 >}}
+{{< figure src="/images/my-unreal-engine-patterns/selects.png" width=600 >}}
 
 ### C++
 
@@ -67,7 +66,7 @@ This list will be updated based on the learnings made.
     * Expose to Blueprints some funcionally that it's only available in C++
     * Wrap long running tasks in **latent functions** (tied to Actors) and **async tasks** (instances of **BlueprintAsyncActionBase**, that are reusable)
 
-* **DuplicateObject** only copies variables market with **UPROPERTY()**
+* **UObject::DuplicateObject** only copies variables marked with **UPROPERTY()**
 * To create a function that has more than one return value, just add function arguments by reference
 
 {{< highlight cpp >}}
@@ -82,7 +81,7 @@ float ReturnMultipleValues(FString& TextRet);
 * Use multiple inputs (**UFUNCTION** with meta **ExpandEnumAsExecs**) to reduce the need of **Switch** and **Branch** nodes in Blueprint code
 
 {{< highlight cpp >}}
-UENUM()
+UENUM(BlueprintType)
 namespace EAuthorityType
 {
 	enum Type
@@ -99,7 +98,7 @@ UFUNCTION(BlueprintCallable, meta = (ExpandEnumAsExecs = "OutResult"))
 void SwitchAuthorityType(AActor* Actor, TEnumAsByte<EAuthorityType::Type>& OutResult);
 {{< /highlight >}}
 
-{{<figure src="/images/my-unreal-engine-patterns/multiple_outputs.png" width=400 >}}
+{{< figure src="/images/my-unreal-engine-patterns/multiple_outputs.png" width=400 >}}
 
 * Use **DetermineOutputType** with **DynamicOutputParam** to dynamically update BP function output type , without the need to write a custom K2Node
 
@@ -137,3 +136,26 @@ Most Expensive CPU Cost      | Animations that cause layout changes.
     * [Asset/Actor Action Utilities](https://www.youtube.com/watch?v=wJqOn88cU7o&list=PLoObU30LCLpcItHySX3dpP02CDUZw4XNk&t=926s)
     * [Blutility Script Buttons](https://www.youtube.com/watch?v=wJqOn88cU7o&list=PLoObU30LCLpcItHySX3dpP02CDUZw4XNk&t=1360s)
     * [Editor Utility Widgets](https://www.youtube.com/watch?v=wJqOn88cU7o&list=PLoObU30LCLpcItHySX3dpP02CDUZw4XNk&t=1604s)
+
+
+### Other References
+
+* Standards
+    * [C++ Coding Standards](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/CodingStandard/)
+    * [Open Unreal Conventions](https://github.com/JonasReich/OpenUnrealConventions)
+    * [UE5 Style Guide](https://github.com/Allar/ue5-style-guide/tree/v2)
+    * [UPROPERTY](https://benui.ca/unreal/uproperty/) reference with examples
+    * [Polymorphic Serialization in Unreal Engine](https://slowburn.dev/blog/polymorphic-serialization-in-unreal-engine/) - explains about instanced properties in UObject derived classes
+* Epic Online Services
+    * [EOS playlist](https://www.youtube.com/playlist?list=PLnHeglBaPYu8EVhYmAU4Tgpmh-yYkg7Mu)
+* Examples
+    * [Repository for Orfeasel Unreal Engine C++ tutorials](https://github.com/orfeasel/UE4-Cpp-Tutorials)
+* Widgets
+    * [Optimization Guidelines for UMG](https://docs.unrealengine.com/5.0/en-US/optimization-guidelines-for-umg-in-unreal-engine/)
+    * [UI Invalidation](https://docs.unrealengine.com/5.0/en-US/invalidation-in-slate-and-umg-for-unreal-engine/)
+    * [UMG Slate Compendium](https://github.com/YawLighthouse/UMG-Slate-Compendium)
+* Tests
+    * [Creating Unit Tests with the Automation System](https://www.orfeasel.com/unit-testing/)
+    * [Creating Functional Tests with the Automation System](https://www.orfeasel.com/functional-tests/)
+    * [Unit Tests in C++](https://github.com/ibbles/LearningUnrealEngine/blob/master/Unit%20tests%20source%20notes.md)
+    * [C++ Unit Test in Unreal Engine 4](https://fjinn.github.io/Experiences/Programming/Unreal/UnitTest.html)

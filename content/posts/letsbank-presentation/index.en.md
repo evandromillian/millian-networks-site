@@ -17,4 +17,4 @@ lightgallery: true
 
 I was invited to a presentation about the game **Myridian: The Last Stand** at Let's Bank's Quinta Tech event. We talk about cloud solutions for the matchmaker, character customization logic and a little about game promotion and publishing.
 
-{{<youtube ET_9gQQnSIw>}}
+{{< youtube ET_9gQQnSIw>}}

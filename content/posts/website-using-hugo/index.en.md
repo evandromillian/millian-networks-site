@@ -1,6 +1,7 @@
 ---
 title: "Website Using Hugo and AWS"
 date: 2022-07-04T10:14:22-03:00
+lastmod: 2022-12-21
 description: ""
 draft: false
 author: "Evandro Millian"
@@ -61,7 +62,7 @@ graph LR;
 {{< /mermaid >}}
 -->
 
-{{<figure src="/images/website-using-hugo/stack_diagram.webp" >}}
+{{< figure src="/images/website-using-hugo/stack_diagram.webp" >}}
 
 ##### S3 Storage Bucket
 
@@ -233,3 +234,4 @@ I hope this help how to create and deploy a **Hugo** website in a easy way. In f
 * [Hugo forum post with error not finding index.html page](https://discourse.gohugo.io/t/on-path-page-not-found-but-index-html-it-opens/27587/13)
 * [Implementing Default Directory Indexes in Amazon S3-backed Amazon CloudFront Origins Using Lambda@Edge](https://aws.amazon.com/blogs/compute/implementing-default-directory-indexes-in-amazon-s3-backed-amazon-cloudfront-origins-using-lambdaedge/)
 * [Cloudformation template for Cloudfront hosted Hugo website](https://github.com/keaeriksson/hugo-s3-cloudfront)
+* [Using GitHub Actions and Hugo Deploy to Deploy a Static Site to AWS](https://capgemini.github.io/development/Using-GitHub-Actions-and-Hugo-Deploy-to-Deploy-to-AWS/)

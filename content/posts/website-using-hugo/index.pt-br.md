@@ -61,7 +61,7 @@ graph LR;
 {{< /mermaid >}}
 -->
 
-{{<figure src="/images/website-using-hugo/stack_diagram.webp" >}}
+{{< figure src="/images/website-using-hugo/stack_diagram.webp" >}}
 
 ##### S3 Storage Bucket
 
@@ -229,3 +229,4 @@ Espero que isso ajude a criar e implantar um site do **Hugo** de maneira fácil.
 * [Hugo forum post with error not finding index.html page](https://discourse.gohugo.io/t/on-path-page-not-found-but-index-html-it-opens/27587/13)
 * [Implementing Default Directory Indexes in Amazon S3-backed Amazon CloudFront Origins Using Lambda@Edge](https://aws.amazon.com/blogs/compute/implementing-default-directory-indexes-in-amazon-s3-backed-amazon-cloudfront-origins-using-lambdaedge/)
 * [Cloudformation template for Cloudfront hosted Hugo website](https://github.com/keaeriksson/hugo-s3-cloudfront)
+* [Using GitHub Actions and Hugo Deploy to Deploy a Static Site to AWS](https://capgemini.github.io/development/Using-GitHub-Actions-and-Hugo-Deploy-to-Deploy-to-AWS/)

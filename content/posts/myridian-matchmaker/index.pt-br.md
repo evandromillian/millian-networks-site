@@ -57,7 +57,7 @@ Uma outra tarefa foi utilizada para tratar o comportamento da sala após sua cri
 
 Com o sistema descrito, o fluxo que a aplicação segue hoje é o seguinte:
 
-{{<figure src="/images/myridian-matchmaker/Myridian_Matchmaker.webp" >}}
+{{< figure src="/images/myridian-matchmaker/Myridian_Matchmaker.webp" >}}
 
 1. **Cliente** faz login no **PlayFab** e recebe um ticket de sessão
 2. Utilizando o ticket de sessão, o cliente conecta à **API WebSocket**, que então verifica o ticket

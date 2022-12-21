@@ -59,7 +59,7 @@ Another task was used to handle the behavior of the room after its creation, wai
 
 With the system described, the application flow is as follows:
 
-{{<figure src="/images/myridian-matchmaker/Myridian_Matchmaker.webp" >}}
+{{< figure src="/images/myridian-matchmaker/Myridian_Matchmaker.webp" >}}
 
 1. **Client** logs into **PlayFab** and receives a session ticket
 2. Using the session ticket, the client connects to the **WebSocket API**, which then verifies the ticket
